@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced HTML5 Content & Form</title>
+  <style>
+    /* Simple, clean styling for readability and accessibility */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+    header, main, footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    img, video, audio {
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #ecf0f1;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    ul, ol {
+      margin-bottom: 15px;
+    }
+
+    /* Form Styling */
+    fieldset {
+      border: 2px solid #bdc3c7;
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 20px;
+      background-color: #fdfefe;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #2c3e50;
+      padding: 0 8px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #2980b9;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    }
+    input:invalid {
+      border-color: #e74c3c;
+    }
+    small {
+      color: #7f8c8d;
+      font-size: 0.85em;
+      margin-top: 4px;
+      display: block;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #7f8c8d;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Mastering HTML5: Content & Forms</h1>
+    <p>Learn how to structure content and build accessible, validated forms using modern HTML5 techniques.</p>
+  </header>
+
+  <main>
+    <!-- Section 1: Lists -->
+    <section>
+      <h2>Essential HTML5 Semantic Elements</h2>
+      <p>These elements improve accessibility and SEO by clearly defining document structure:</p>
+      <ul>
+        <li><strong><main></strong> – Contains the main content of the page.</li>
+        <li><strong><article></strong> – A self-contained composition (e.g., blog post).</li>
+        <li><strong><aside></strong> – Sidebar or content indirectly related.</li>
+        <li><strong><figure></strong> and <strong><figcaption></strong> – For images with captions.</li>
+        <li><strong><time></strong> – Semantic representation of dates and times.</li>
+      </ul>
+
+      <h3>Steps to Create a Valid HTML5 Page</h3>
+      <ol>
+        <li>Start with <code><!DOCTYPE html></code>.</li>
+        <li>Add <code><html lang="en"></code> for language accessibility.</li>
+        <li>Include <code><meta charset="UTF-8"></code> and viewport tag.</li>
+        <li>Use semantic elements to structure content.</li>
+        <li>Always label form controls for screen readers.</li>
+      </ol>
+    </section>
+
+    <!-- Section 2: Table -->
+    <section>
+      <h2>HTML5 Input Types and Their Uses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Input Type</th>
+            <th>Description</th>
+            <th>Validation Benefit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>email</code></td>
+            <td>Email address input</td>
+            <td>Browser checks for valid email format</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>Web address input</td>
+            <td>Requires valid URL syntax</td>
+          </tr>
+          <tr>
+            <td><code>number</code></td>
+            <td>Numeric input</td>
+            <td>Restricts non-numeric input</td>
+          </tr>
+          <tr>
+            <td><code>date</code></td>
+            <td>Date picker</td>
+            <td>Ensures correct date format</td>
+          </tr>
+          <tr>
+            <td><code>tel</code></td>
+            <td>Telephone number</td>
+            <td>No automatic validation (use pattern)</td>
+          </tr>
+          <tr>
+            <td><code>color</code></td>
+            <td>Color picker</td>
+            <td>Returns hex color code</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 3: Media -->
+    <section>
+      <h2>Learning Media</h2>
+
+      <h3>Video: HTML5 Forms Explained</h3>
+      <video controls width="100%" height="auto">
+        <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Audio: Accessibility Tips</h3>
+      <audio controls>
+        <source src="https://ia801408.us.archive.org/16/items/cd_2024_greg-wilson_greg-wilson-01_preview/greg-wilson-01_preview.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Image: HTML5 Logo</h3>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+             alt="HTML5 Logo and Wordmark"
+             width="200">
+        <figcaption>The official HTML5 logo representing modern web standards.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 4: HTML5 Form -->
+    <section>
+      <h2>Student Registration Form</h2>
+      <form action="#" method="post" novalidate>
+
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div class="form-group">
+            <label for="fullName">Full Name <span style="color:red;">*</span></label>
+            <input type="text"
+                   id="fullName"
+                   name="fullName"
+                   placeholder="Enter your full name"
+                   required
+                   minlength="2"
+                   autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:red;">*</span></label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="example@domain.com"
+                   required
+                   autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="e.g., (555) 123-4567"
+                   pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
+                   autocomplete="tel">
+            <small>Use format: (555) 123-4567 or 555.123.4567</small>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date"
+                   id="dob"
+                   name="dob"
+                   max="2007-12-31"
+                   min="1900-01-01">
+          </div>
+        </fieldset>
+
+        <!-- Account & Preferences -->
+        <fieldset>
+          <legend>Account & Preferences</legend>
+
+          <div class="form-group">
+            <label for="username">Username <span style="color:red;">*</span></label>
+            <input type="text"
+                   id="username"
+                   name="username"
+                   placeholder="Choose a username"
+                   required
+                   minlength="4"
+                   maxlength="15"
+                   pattern="[a-zA-Z0-9_]+"
+                   autocomplete="username">
+            <small>Only letters, numbers, and underscores allowed.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password <span style="color:red;">*</span></label>
+            <input type="password"
+                   id="password"
+                   name="password"
+                   placeholder="At least 8 characters with a number and letter"
+                   required
+                   minlength="8"
+                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
+                   autocomplete="new-password">
+            <small>Must include uppercase, lowercase, and a digit.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="website">Personal Website</label>
+            <input type="url"
+                   id="website"
+                   name="website"
+                   placeholder="https://www.yourwebsite.com"
+                   autocomplete="url">
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Experience Level</label>
+            <select id="experience" name="experience" required>
+              <option value="">-- Select One --</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Additional Info -->
+        <fieldset>
+          <legend>Additional Information</legend>
+
+          <div class="form-group">
+            <label for="bio">About You</label>
+            <textarea id="bio"
+                      name="bio"
+                      rows="4"
+                      placeholder="Share a bit about your background (10–200 characters)"
+                      minlength="10"
+                      maxlength="200"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="newsletter" value="yes" checked>
+              Subscribe to our monthly newsletter
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="terms" value="accepted" required>
+              I agree to the <a href="#" target="_blank">Terms of Service</a> <span style="color:red;">*</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Contact Method</label>
+            <div style="margin-top: 5px;">
+              <label><input type="radio" name="contact" value="email" checked> Email</label>
+              <label style="margin-left: 15px;"><input type="radio" name="contact" value="phone"> Phone</label>
+              <label style="margin-left: 15px;"><input type="radio" name="contact" value="text"> Text</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color" name="color" value="#4169e1">
+          </div>
+
+          <div class="form-group">
+            <label for="score">Quiz Score (Readonly Example)</label>
+            <input type="number"
+                   id="score"
+                   name="score"
+                   value="75"
+                   min="0"
+                   max="100"
+                   readonly>
+            <small>This field cannot be edited.</small>
+          </div>
+        </fieldset>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Web Technologies Classroom. All rights reserved.</p>
+    <p>Designed for learning advanced HTML5 content and form validation techniques.</p>
+  </footer>
+
+</body>
+</html>
